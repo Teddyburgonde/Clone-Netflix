@@ -1,19 +1,29 @@
 *{
     box-sizing: border-box;
 }
-body {
+body{
     font-family: 'Open Sans', sans-serif;
     margin: 0;
 }
-#home {
+#home{
     background-image: url("../img/background-black.jpg");
 }
 nav{
     background-color: transparent;
     height: 100px;
+    display: flex;
+    align-items: center;
 }
-nav img {
+nav img{
     width: 150px;
+}
+.nav-bar a{
+    margin-left: 10px;
+    font-weight: 400;
+    transition: all .3s;
+}
+.nav-bar a:hover{
+    border-bottom: 2px solid #fff;
 }
 form{
     background-color: rgba(0, 0, 0, .75);
@@ -27,10 +37,14 @@ input{
     padding: 16px 20px;
     margin: 5px 0;
     border: none;
-    border-radius: 4px;
+    border-radius: 4px ;
     background-color: #333;
     font-size: 16px;
     color: #fff;
+    -webkit-border-radius: 4px ;
+    -moz-border-radius: 4px ;
+    -ms-border-radius: 4px ;
+    -o-border-radius: 4px ;
     opacity: .8;
     outline: none;
 }
@@ -43,47 +57,54 @@ input[type=submit]:hover{
     background-color: rgb(173, 7, 15);
     cursor: pointer;
 }
-input[type=email]:focus,
+input[type=email]:focus, 
 input[type=password]:focus,
-input[type=email]:hover,
+input[type=email]:hover, 
 input[type=password]:hover
 {
     opacity: 1;
     background-color: rgb(34, 34, 34);
 }
+
 label{
     color: #fff;
     margin-left: 10px;
 }
-a{ 
-    color: #fff;
-}
 p{
     color: #737373;
 }
-.content {
+a{
+    color: #fff;
+}
+.content{ 
     margin: 0 10%;
     margin-top: 150px;
 }
-.row {
+.row{
     display: flex;
     justify-content: center;
 }
-#profil-page {
+
+#profil-page,
+#films-page{
     background-color: #141414;
 }
 h1{
     color: #fff;
     font-size: 3em;
 }
-.profil img{ 
+.profil img{
     border: 2px solid transparent;
     width: 100%;
 }
 .profil img,
 .profil p
-{
+{ 
     transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
 }
 .profil:hover img{
     border: 2px solid #fff;
@@ -91,7 +112,7 @@ h1{
 .profil:hover p{
     color: #fff;
 }
-a {
+a{
     text-decoration: none;
 }
 .btn{
@@ -102,11 +123,62 @@ a {
     margin-top: 50px;
     font-size: .9em;
     transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
 }
 .btn:hover{
     border: 1px solid #fff;
     color: #fff;
 }
-.space-between {
+.space-between{
     justify-content: space-between;
+}
+video{
+    width: 100%;
+}
+#video{
+    height: 600px;
+    overflow: hidden;
+}
+#films-page nav{
+    position: absolute;
+    width: 100%;
+    top: 0 ;
+    left: 0;
+    z-index: 9;
+}
+h2{
+    color: #fff;
+}
+#films-page .row{
+    margin-top: 10px;
+}
+#films-page .content{
+    margin-top: 10px;
+}
+.row div { 
+    width: 100%;
+}
+.pl-5{
+    padding-left: 50px;
+}
+button{
+    background-color: rgba(51,51,51,.8);
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all .3s;
+}
+button i {
+    margin-right: 5px;
+}
+button:hover{
+    background-color: rgba(51,51,51,1);
+    cursor: pointer;
 }
